@@ -33,7 +33,7 @@ const Chat = ({socket, username, room}) => {
                 <ScrollToBottom className={"message-container"}>
                     {messageList.map((messageContent) => {
                         return (
-                            <div
+                            <div key={messageContent.message + Math.random().toString(16).slice(2)}
                                 className="message"
                                 id={username === messageContent.author ? "you" : "other"}
                             >
